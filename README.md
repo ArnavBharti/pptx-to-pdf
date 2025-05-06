@@ -25,6 +25,30 @@ It provides a simple command-line interface to select files for conversion and/o
     * Install on Debian/Ubuntu: `sudo apt update && sudo apt install libreoffice`
     * Install on Fedora: `sudo dnf install libreoffice`
     * Install on Arch Linux: `sudo pacman -S libreoffice-still` or `libreoffice-fresh`
+ 
+## Global Installation (Usage)
+
+While this project uses `uv` and virtual environments for development, if you want to install `pptx-to-pdf` as a command-line tool accessible from anywhere on your system, using `pipx` is the recommended method:
+
+1.  **Install pipx:** Follow the instructions at [https://pipx.pypa.io/stable/installation/](https://pipx.pypa.io/stable/installation/) or use your system package manager (e.g., `sudo apt install pipx`).
+2.  **Ensure pipx paths are configured:**
+    ```bash
+    pipx ensurepath
+    ```
+    *(You may need to restart your shell after this.)*
+3.  **Install pptx-to-pdf:**
+    * **From Git:**
+        ```bash
+        pipx install git+[https://github.com/arnavbharti/pptx-to-pdf.git](https://github.com/arnavbharti/pptx-to-pdf.git)
+        ```
+    * **From Local Source (run from project root):**
+        ```bash
+        pipx install ./
+        ```
+
+Now you can run `pptx-to-pdf` directly from any terminal.
+
+**Note:** Even when installed globally, `pptx-to-pdf` still requires **LibreOffice** to be installed separately on your system for file conversions to work.
 
 ## Installation
 
