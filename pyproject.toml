@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pptx_to_pdf"
+version = "1.0.0"
+authors = [
+    { name = "Arnav Bharti", email = "arnavbharti03@gmail.com" },
+]
+description = "Convert PPTX/Office docs to PDF & merge PDFs via interactive TUI (Linux/LibreOffice)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT License" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Utilities",
+    "Topic :: Text Processing :: Filters",
+    "Topic :: Office/Business",
+]
+keywords = ["pdf", "pptx", "converter", "merger", "libreoffice", "tui", "linux"]
+dependencies = [
+    "rich>=13.0.0",
+    "inquirerpy>=0.3.4",
+    "pypdf>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/arnavbharti/pptx-to-pdf"
+"Repository" = "https://github.com/arnavbharti/pptx-to-pdf"
+"Bug Tracker" = "https://github.com/arnavbharti/pptx-to-pdf/issues"
+
+[project.scripts]
+pptx-to-pdf = "pptx_to_pdf.main:run"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff",       
+    "black",       
+    "reportlab>=4.0.0",
+]
+
+
+[tool.setuptools]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "C",   # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "SIM", # flake8-simplify
+    "PTH", # flake8-use-pathlib
+    "PYI", # flake8-pyi
+]
+ignore = []

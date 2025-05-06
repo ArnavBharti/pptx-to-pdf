@@ -1,0 +1,56 @@
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build Artifacts
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+# Conda environments
+.conda/
+
+# IDE / Editor Specific Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Testing Artifacts
+.pytest_cache/
+htmlcov/
+.coverage*
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+junit*.xml
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Generated Output (Optional - useful during development)
+converted_pdfs/
+# *.pdf # Be careful not to ignore source PDFs if they are in the repo
+
+# Type checker cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# Environment Variables File
+.env*
