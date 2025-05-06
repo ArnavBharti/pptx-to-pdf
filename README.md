@@ -39,7 +39,7 @@ While this project uses `uv` and virtual environments for development, if you wa
 3.  **Install pptx-to-pdf:**
     * **From Git:**
         ```bash
-        pipx install git+[https://github.com/arnavbharti/pptx-to-pdf.git](https://github.com/arnavbharti/pptx-to-pdf.git)
+        pipx install git+https://github.com/arnavbharti/pptx-to-pdf.git
         ```
     * **From Local Source (run from project root):**
         ```bash
